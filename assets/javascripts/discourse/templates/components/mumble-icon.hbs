@@ -1,0 +1,17 @@
+{{#header-dropdown iconId="toggle-mumble-menu"
+					class="mumble-menu"
+					icon="headphones"
+					toggleVisible=dropdownVisible
+					loginAction="showLogin"
+					title="mumble.icon_title"}}
+	<span class='badge-notification mumble-user-count'>{{userCount}}</span>
+	{{#menu-panel visible=dropdownVisible}}
+		<div class="mumble-panel-header">
+			{{fa-icon "server"}} {{server.name}}
+		</div>
+		<hr />
+		<ul>
+			{{mumble-channel data=rootChannel}}
+		</ul>
+	{{/menu-panel}}
+{{/header-dropdown}}

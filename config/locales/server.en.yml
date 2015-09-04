@@ -1,0 +1,6 @@
+en:
+  site_settings:
+    mumble_enabled: "Display Mumble information?"
+    mumble_interval: "Refresh interval in milliseconds"
+    mumble_cvp: "The URL to the Channel Viewer Protocol service"
+    mumble_xml: "Whether the CVP service returns XML (if false expects JSON)"

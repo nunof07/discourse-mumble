@@ -1,0 +1,43 @@
+.mumble-menu {
+	.mumble-user-count {
+		cursor: default;
+	}
+	.menu-panel {
+		position: fixed;
+		text-align: left;
+		
+		hr {
+			margin: 3px 0;
+		}
+		ul ul {
+			padding-left: 20px;
+		}
+		.panel-body {
+			max-height: 500px;
+		}
+		.fa {
+			font-size: 1em;
+			width: auto;
+			height: auto;
+			line-height: 1em;
+		}
+		.mumble-panel-header {
+			color: dark-light-choose(scale-color($primary, $lightness: 50%), scale-color($secondary, $lightness: 50%));
+			font-size: 1.1em;
+			
+			.fa {
+				font-size: 1.1em;
+				line-height: 1.1em;
+			}
+		}
+		.mumble-channel-icon {
+			width: 8px;
+			color: $tertiary;
+		}
+		.mumble-user-idle {
+			.fa {
+				color: dark-light-choose(scale-color($primary, $lightness: 75%), scale-color($secondary, $lightness: 75%));
+			}
+		}
+	}
+}

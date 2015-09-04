@@ -1,0 +1,11 @@
+plugins:
+  mumble_enabled:
+    default: true
+    client: true
+  mumble_interval:
+    default: 60000
+    client: true
+  mumble_cvp:
+    default: ''
+  mumble_xml:
+    default: false
