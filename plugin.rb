@@ -1,4 +1,4 @@
-# name: mumble
+# name: Mumble
 # about: Displays channel and user information from a Mumble server
 # version: 0.1.0
 # authors: Nuno Freitas (nunofreitas@gmail.com)
