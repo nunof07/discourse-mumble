@@ -5,6 +5,12 @@ A Mumble Viewer plugin for Discourse that displays channel and user information.
 
 The Mumble server needs to support the [Channel Viewer Protocol][cvp]. Most Mumble servers support this. If you manage your own server you can install a [3rd party application][cvpapp] to do this.
 
+## Features
+The plugin adds a button to the header.
+- The button displays the number of users connected to the Mumble server.
+- Clicking the button will open a menu with the list of channels and users.
+- Idle users will have a toned down icon.
+
 Screenshot of the plugin in action:
 
 ![Discourse Mumble Plugin Screenshot](https://cdn.rawgit.com/nunof07/discourse-mumble/9a3d7866096885567201e2d1bf44a3b8e6cf78cc/discourse-mumble-screenshot.png)
