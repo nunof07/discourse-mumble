@@ -34,10 +34,17 @@
 			width: 8px;
 			color: $tertiary;
 		}
+		.mumble-channel-name {
+			display: inline-block;
+		}
 		.mumble-user-idle {
 			.fa {
 				color: dark-light-choose(scale-color($primary, $lightness: 75%), scale-color($secondary, $lightness: 75%));
 			}
 		}
 	}
+}
+.d-header .icons .unread-private-messages {
+	left: initial;
+	right: 27px;
 }

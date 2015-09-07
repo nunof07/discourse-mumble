@@ -8,8 +8,9 @@ The Mumble server needs to support the [Channel Viewer Protocol][cvp]. Most Mumb
 ## Features
 The plugin adds a button to the header.
 - The button displays the number of users connected to the Mumble server.
-- Clicking the button will open a menu with the list of channels and users.
-- Idle users will have a toned down icon.
+- Clicking the button opens a menu with the list of channels and users.
+- Idle users have a toned down icon.
+- Information is refreshed periodically (configurable).
 
 Screenshot of the plugin in action:
 
@@ -27,5 +28,6 @@ Then go to Admin > Plugins and choose Mumble settings:
 - *mumble_interval*: the interval between information refreshes
 - *mumble_cvp*: the URL to the [Channel Viewer Protocol][cvp] service
 - *mumble_xml*: whether the URL to the CVP service is for XML, otherwise will use JSON
+- *mumble_show_empty_channels*: whether to display empty channels
 
 [plugin]: https://meta.discourse.org/t/install-a-plugin/19157

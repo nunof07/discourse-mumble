@@ -3,52 +3,32 @@ export default Ember.Component.extend({
 	data: null,
 	expanded: true,
 	
-	children: function() {
-		var data = this.get('data');
-		
-		if (data) {
-			if (data.channels) {
-				return data.channels;
-			} else if (data.channel) {
-				if (Ember.isArray(data.channel)) {
-					return data.channel;
-				} else {
-					return [data.channel];
-				}
-			}
-		}
-		
-		return [];
+	children: function () {
+		return Mumble.getChannels(this.get('data'));
 	}.property('data'),
 	
-	usersList: function() {
-		var data = this.get('data');
-		
-		if (data) {
-			if (data.users) {
-				return data.users;
-			} else if (data.user) {
-				if (Ember.isArray(data.user)) {
-					return data.user;
-				} else {
-					return [data.user];
-				}
-			}
-		}
-		
-		return [];
+	usersList: function () {
+		return Mumble.getUsers(this.get('data'));
 	}.property('data'),
 	
-	iconClass: function() {
-		if (this.get('expanded')) {
-			return "fa fa-caret-down";
-		}
+	userCount: function () {
+		return Mumble.countUsers(this.get('data'), true);
+	}.property('data'),
+	
+	isVisible: function () {
+		var isEmpty = (this.get('userCount') === 0);
 		
-		return "fa fa-caret-right";
+		return (!isEmpty || Discourse.SiteSettings.mumble_show_empty_channels);
+	}.property('isEmpty'),
+	
+	iconClass: function () {
+		return this.get('expanded')
+			? "fa fa-caret-down"
+			: "fa fa-caret-right";
 	}.property('expanded'),
 	
 	actions: {
-		expand: function() {
+		expand: function () {
 			this.set('expanded', !this.get('expanded'));
 		}
 	}

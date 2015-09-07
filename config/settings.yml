@@ -9,3 +9,6 @@ plugins:
     default: ''
   mumble_xml:
     default: false
+  mumble_show_empty_channels:
+    default: false
+    client: true
