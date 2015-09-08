@@ -1,10 +1,22 @@
 ;(function (Mumble) {
+	Mumble.getServer = function (data) {
+		if (data) {
+			if (data.server) {
+				return data.server;
+			} else {
+				return data;
+			}
+		}
+		
+		return {};
+	};
+	
 	Mumble.getRootChannel = function (data) {
 		if (data) {
 			if (data.root) {
 				return data.root;
-			} else if (data.server && data.server.channel) {
-				return data.server.channel;
+			} else if (data.channel) {
+				return data.channel;
 			}
 		}
 		
@@ -43,26 +55,18 @@
 		return [];
 	};
 	
-	Mumble.countUsers = function (root, recursive) {
-		var count = 0;
+	Mumble.countUsers = function (channel, recursive) {
+		var count = 0,
+			users = Mumble.getUsers(channel);
+		
+		count += users.length;
 		
 		if (recursive) {
-			var iterate = function (channel) {
-					var users = Mumble.getUsers(channel),
-						channels = Mumble.getChannels(channel);
-						
-					count += users.length;
-					
-					for (var i = 0; i < channels.length; i +=1) {
-						iterate(channels[i]);
-					}
-				};
-					
-			iterate(root);
-		} else {
-			var users = Mumble.getUsers(root);
+			var channels = Mumble.getChannels(channel);
 			
-			count += users.length;
+			for (var i = 0; i < channels.length; i +=1) {
+				count += Mumble.countUsers(channels[i], true);
+			}
 		}
 		
 		return count;

@@ -17,7 +17,7 @@ export default Ember.Component.extend({
 			
 		Discourse.ajax('/mumble/list.json')
 				 .then(function (data) {
-					 _this.set('server', data);
+					 _this.set('server', Mumble.getServer(data));
 				 });
 		
 		Ember.run.later(this, function() {
