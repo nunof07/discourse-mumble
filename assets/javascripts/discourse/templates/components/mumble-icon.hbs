@@ -4,7 +4,9 @@
 					toggleVisible=dropdownVisible
 					loginAction="showLogin"
 					title="mumble.icon_title"}}
-	<span class='badge-notification mumble-user-count'>{{userCount}}</span>
+	{{#if showCount}}
+		<span class='badge-notification mumble-user-count'>{{userCount}}</span>
+	{{/if}}
 	{{#menu-panel visible=dropdownVisible}}
 		<div class="mumble-panel-header">
 			{{fa-icon "server"}} {{server.name}}

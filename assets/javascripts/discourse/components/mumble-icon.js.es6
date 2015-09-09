@@ -11,6 +11,10 @@ export default Ember.Component.extend({
 		return Mumble.countUsers(this.get('rootChannel'), true);
 	}.property('rootChannel'),
 	
+	showCount: function () {
+		return (this.get('userCount') > 0);
+	}.property('userCount'),
+	
 	_refreshService: function () {
 		var _this = this,
 			interval = Discourse.SiteSettings.mumble_interval > 0 ? Discourse.SiteSettings.mumble_interval : 60000;
