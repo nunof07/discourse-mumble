@@ -1,5 +1,7 @@
 export default Ember.Component.extend({
-	tagName: '',
+	tagName: 'li',
+	classNames: ['mumble-user'],
+	classNameBindings: ['idle::mumble-user-idle'],
 	data: null,
 	
 	idle: function() {

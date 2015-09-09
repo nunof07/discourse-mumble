@@ -29,7 +29,7 @@ export default Ember.Component.extend({
 	
 	actions: {
 		expand: function () {
-			this.set('expanded', !this.get('expanded'));
+			this.toggleProperty('expanded');
 		}
 	}
 });

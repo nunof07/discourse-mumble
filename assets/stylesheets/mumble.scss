@@ -1,4 +1,6 @@
 .mumble-menu {
+	float: left;
+	
 	.mumble-user-count {
 		cursor: default;
 	}
@@ -14,6 +16,7 @@
 		}
 		.panel-body {
 			max-height: 500px;
+			height: auto !important;
 		}
 		.fa {
 			font-size: 1em;
@@ -44,7 +47,12 @@
 		}
 	}
 }
-.d-header .icons .unread-private-messages {
-	left: initial;
-	right: 27px;
+.d-header .icons {
+	.unread-private-messages {
+		left: initial;
+		right: 27px;
+	}
+	> div.ember-view {
+		float: left;
+	}
 }
