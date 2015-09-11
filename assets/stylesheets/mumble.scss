@@ -5,12 +5,8 @@
 		cursor: default;
 	}
 	.menu-panel {
-		position: fixed;
 		text-align: left;
 		
-		hr {
-			margin: 3px 0;
-		}
 		ul ul {
 			padding-left: 20px;
 		}
@@ -25,13 +21,11 @@
 			line-height: 1em;
 		}
 		.mumble-panel-header {
+			width: 100%;
+			display: table;
+			border-collapse: separate;
+			border-spacing: 0 0.5em;
 			color: dark-light-choose(scale-color($primary, $lightness: 50%), scale-color($secondary, $lightness: 50%));
-			font-size: 1.1em;
-			
-			.fa {
-				font-size: 1.1em;
-				line-height: 1.1em;
-			}
 		}
 		.mumble-channel-icon {
 			width: 8px;
@@ -49,7 +43,7 @@
 }
 .d-header .icons {
 	.unread-private-messages {
-		left: initial;
+		left: auto;
 		right: 27px;
 	}
 	> div.ember-view {
