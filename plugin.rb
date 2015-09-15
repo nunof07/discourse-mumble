@@ -1,6 +1,6 @@
 # name: Mumble
 # about: Displays channel and user information from a Mumble server
-# version: 0.2.2
+# version: 0.2.3
 # authors: Nuno Freitas (nunofreitas@gmail.com)
 # url: https://github.com/nunof07/discourse-mumble
 
