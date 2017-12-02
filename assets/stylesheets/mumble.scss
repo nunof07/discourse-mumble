@@ -1,62 +1,37 @@
-.mumble-menu {
-	float: left;
-	
-	.mumble-user-count {
-		cursor: default;
-	}
-	.menu-panel {
-		text-align: left;
-		
-		ul ul {
-			padding-left: 20px;
-		}
-		.panel-body {
-			height: auto !important;
-		}
-		.fa {
-			font-size: 1em;
-			width: auto;
-			height: auto;
-			line-height: 1em;
-		}
-		.mumble-panel-header {
-			width: 100%;
-			display: table;
-			border-collapse: separate;
-			border-spacing: 0 0.5em;
-			color: dark-light-choose(scale-color($primary, $lightness: 50%), scale-color($secondary, $lightness: 50%));
-		}
-		.mumble-channel-icon {
-			width: 8px;
-			color: $tertiary;
-		}
-		.mumble-channel-name {
-			display: inline-block;
-		}
-		.mumble-user-idle {
-			.fa {
-				color: dark-light-choose(scale-color($primary, $lightness: 75%), scale-color($secondary, $lightness: 75%));
-			}
-		}
-	}
-	.menu-panel.slide-in {
-		height: auto !important;
-		
-		.panel-body {
-			position: static;
-		}
-	}
+.mumble-badge {
+  left: unset !important;
+  right: 0;
 }
-.d-header .icons {
-	.unread-private-messages {
-		left: auto;
-		right: 27px;
-	}
-	.flagged-posts {
-		left: auto;
-		right: 69px;
-	}
-	> div.ember-view {
-		float: left;
-	}
+
+.mumble-panel {
+  cursor: pointer;
+  text-align: left;
+
+  .mumble-panel-header {
+    color: dark-light-choose(scale-color($primary, $lightness: 50%), scale-color($secondary, $lightness: 50%));
+  }
+
+  .fa {
+    margin-right: 5px;
+    font-size: 14px !important;
+    width: auto;
+    height: auto;
+    line-height: 1.7;
+  }
+
+  .mumble-channel, .mumble-user {
+    margin-left: 15px;
+
+    &.root {
+      margin-left: 0;
+    }
+  }
+
+  .mumble-channel-name {
+    color: $tertiary;
+  }
+
+  .mumble-user.idle .fa {
+    color: dark-light-choose(scale-color($primary, $lightness: 75%), scale-color($secondary, $lightness: 75%));
+  }
 }
