@@ -31,3 +31,8 @@ Then go to Admin > Plugins and choose Mumble settings:
 <!-- - *mumble_show_empty_channels*: whether to display empty channels -->
 
 [plugin]: https://meta.discourse.org/t/install-a-plugin/19157
+
+## Contributors
+
+- [nunof07](https://github.com/nunof07)
+- [muhlisbc](https://github.com/muhlisbc)
