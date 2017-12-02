@@ -1,4 +1,5 @@
 en:
   js:
     mumble:
-        icon_title: "Mumble channel and user information"
+        icon:
+          title: "Mumble channel and user information"
