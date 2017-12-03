@@ -7,11 +7,11 @@ let mumbleIconWidget, mumblePanelWidget, mumbleData;
 
 function countUsers(channel) {
   let count = channel.users.length;
-  if ( channel !== mumble_afkchannel ) {
-    channel.channels.forEach((chan) => {
+  channel.channels.forEach((chan) => {
+    if ( chan !== siteSettings.mumble_afkchannel ) {
       count += countUsers(chan);
-    });
-  };
+    }  
+  });
   return count;
 }
 
