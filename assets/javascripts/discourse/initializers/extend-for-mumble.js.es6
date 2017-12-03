@@ -7,9 +7,11 @@ let mumbleIconWidget, mumblePanelWidget, mumbleData;
 
 function countUsers(channel) {
   let count = channel.users.length;
-  channel.channels.forEach((chan) => {
-    count += countUsers(chan);
-  });
+  if ( channel !== mumble_afkchannel ) {
+    channel.channels.forEach((chan) => {
+      count += countUsers(chan);
+    });
+  };
   return count;
 }
 
