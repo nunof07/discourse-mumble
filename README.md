@@ -36,3 +36,5 @@ Then go to Admin > Plugins and choose Mumble settings:
 
 - [nunof07](https://github.com/nunof07)
 - [muhlisbc](https://github.com/muhlisbc)
+- [Adorfer](https://github.com/Adorfer)
+- [ArwedSchmidt](https://github.com/ArwedSchmidt)
