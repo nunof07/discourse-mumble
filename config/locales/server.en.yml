@@ -3,3 +3,4 @@ en:
     mumble_enabled: "Display Mumble information?"
     mumble_cvp: "The URL to the Channel Viewer Protocol service"
     mumble_xml: "Whether the CVP service returns XML (if false expects JSON)"
+    mumble_afkchannel: "name of the afk channel (users in there will not be counted global)"

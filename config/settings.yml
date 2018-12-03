@@ -6,3 +6,5 @@ plugins:
     default: ''
   mumble_xml:
     default: false
+  mumble_afkchannel:
+    default: ''
