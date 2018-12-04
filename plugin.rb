@@ -6,6 +6,14 @@
 
 enabled_site_setting :mumble_enabled
 
+if respond_to?(:register_svg_icon)
+  register_svg_icon "server"
+  register_svg_icon "headphones"
+  register_svg_icon "caret-down"
+  register_svg_icon "caret-right"
+  register_svg_icon "user"
+end
+
 after_initialize {
 
   require_dependency File.expand_path("../jobs/mumble_job.rb", __FILE__)
@@ -24,15 +32,15 @@ after_initialize {
       isolate_namespace Mumble
     end
   end
-    
+
   Mumble::Engine.routes.draw do
     get  "/list" => "mumble#list"
   end
-    
+
   Discourse::Application.routes.append do
     mount ::Mumble::Engine, at: "/mumble"
   end
-    
+
   require_dependency "application_controller"
   class Mumble::MumbleController < ::ApplicationController
     def list
