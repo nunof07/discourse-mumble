@@ -6,11 +6,13 @@ import { ajax } from 'discourse/lib/ajax';
 let mumbleIconWidget, mumblePanelWidget, mumbleData;
 
 function countUsers(channel) {
-  let count = channel.users.length;
+  const count = channel.users.length;
+  const siteSettings = Discourse.__container__.lookup("site-settings:main");
+
   channel.channels.forEach((chan) => {
     if ( chan !== siteSettings.mumble_afkchannel ) {
       count += countUsers(chan);
-    }  
+    }
   });
   return count;
 }
@@ -33,7 +35,7 @@ function rerenderWidgets() {
   }
   if (mumblePanelWidget) {
     mumblePanelWidget.scheduleRerender();
-  }  
+  }
 }
 
 function initMumbleWidget(api) {
