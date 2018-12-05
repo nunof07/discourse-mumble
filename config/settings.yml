@@ -8,3 +8,4 @@ plugins:
     default: false
   mumble_afkchannel:
     default: ''
+    client: true
